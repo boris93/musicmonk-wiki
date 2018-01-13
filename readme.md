@@ -21,12 +21,6 @@
 * Req	`{name, identifier, otp}`
 * Res	`{status, id, token, name}`
 
-#### Validate OTP and login
-
-* **POST**	*/user*
-* Req	`{name, identifier, otp}`
-* Res	`{status, id, token, name}`
-
 #### Create a new bridge
 
 * **POST**	*/bridge*
