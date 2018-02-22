@@ -32,6 +32,17 @@
 * **GET**	*/memberships*
 * Res	`{status, memberships [ { bridge{ id, title, description, createdAt, lastActiveAt, visibility }, membership { userId, bridgeId, type, invitedAt, joinedAt } } ] }`
 
+#### Get messages
+
+* **GET**	*/messages?lmid=[last_readmessage_id]*
+* Res	`{status, messages [messageId, senderId, bridgeId, sentAt, type, message], bridges { [id] : {bridge} }, profiles { [id] : {profile} } }`
+
+#### Send message
+
+* **POST**	*/bridge/message*
+* Req	`{bridgeId, messageType : "CHAT", message}`
+* Res	`{status, messageId}`
+
 #### Search
 
 * **GET**	*/search?q=*
